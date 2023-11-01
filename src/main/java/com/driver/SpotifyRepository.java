@@ -32,6 +32,8 @@ public class SpotifyRepository {
         creatorPlaylistMap = new HashMap<>();
         userPlaylistMap = new HashMap<>();
         songLikeMap = new HashMap<>();
+        artistLikeMap = new HashMap<>();
+        artistSongMap = new HashMap<>();
 
         users = new ArrayList<>();
         songs = new ArrayList<>();
