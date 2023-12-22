@@ -45,6 +45,8 @@ public class SpotifyRepository {
     public User createUser(String name, String mobile) {
         User user = new User(name,mobile);
         users.add(user);
+
+        userPlaylistMap.put(user,new ArrayList<>());
         return user;
     }
     public Optional<User> findUser(String mobile){
@@ -59,6 +61,8 @@ public class SpotifyRepository {
     public Artist createArtist(String name) {
         Artist artist = new Artist(name);
         artists.add(artist);
+
+        artistAlbumMap.put(artist,new ArrayList<>());
         return artist;
     }
     private Optional<Artist> findArtist(String artistName){
