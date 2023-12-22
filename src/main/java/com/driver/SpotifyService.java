@@ -13,7 +13,6 @@ public class SpotifyService {
 
     public User createUser(String name, String mobile){
         return spotifyRepository.createUser(name,mobile);
-
     }
 
     public Artist createArtist(String name) {
@@ -25,38 +24,30 @@ public class SpotifyService {
     }
 
     public Song createSong(String title, String albumName, int length) throws Exception {
-        return spotifyRepository.createSong(title,albumName,length);
+        return spotifyRepository.createSong(title, albumName, length);
     }
 
     public Playlist createPlaylistOnLength(String mobile, String title, int length) throws Exception {
-        return spotifyRepository.createPlaylistOnLength(mobile,title,length);
+        return spotifyRepository.createPlaylistOnLength(mobile, title, length);
     }
 
     public Playlist createPlaylistOnName(String mobile, String title, List<String> songTitles) throws Exception {
-        return spotifyRepository.createPlaylistOnName(mobile,title,songTitles);
+        return spotifyRepository.createPlaylistOnName(mobile, title, songTitles);
     }
 
     public Playlist findPlaylist(String mobile, String playlistTitle) throws Exception {
-        return spotifyRepository.findPlaylist(mobile,playlistTitle);
+        return spotifyRepository.findPlaylist(mobile, playlistTitle);
     }
 
     public Song likeSong(String mobile, String songTitle) throws Exception {
-        return spotifyRepository.likeSong(mobile,songTitle);
+        return spotifyRepository.likeSong(mobile, songTitle);
     }
 
     public String mostPopularArtist() {
-        String artistName = spotifyRepository.mostPopularArtist();
-        if(artistName.isEmpty()){
-            return "Artist db empty";
-        }
-        return artistName;
+        return spotifyRepository.mostPopularArtist();
     }
 
     public String mostPopularSong() {
-        String songName = spotifyRepository.mostPopularSong();
-        if(songName.isEmpty()){
-            return "song db empty";
-        }
-        return songName;
+        return spotifyRepository.mostPopularSong();
     }
 }
